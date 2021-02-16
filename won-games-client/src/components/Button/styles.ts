@@ -2,7 +2,9 @@ import styled, { css, DefaultTheme } from 'styled-components'
 
 import { ButtonProps } from '.'
 
-type WrapperProps = Omit<ButtonProps, 'children'>
+type WrapperProps = {
+  hasIcon: boolean
+} & Omit<ButtonProps, 'children'>
 
 const WrapperModifiers = {
   small: (theme: DefaultTheme) => css`
@@ -22,19 +24,40 @@ const WrapperModifiers = {
     font-size: ${theme.font.sizes.medium};
 
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
+  `,
+
+  fullWidth: () => css`
+    width: 100%;
+  `,
+
+  withIcon: (theme: DefaultTheme) => css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 1.5rem;
+
+      & + span {
+        margin-left: ${theme.spacings.xxsmall};
+      }
+    }
   `
 }
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ theme, size }) => css`
+  ${({ theme, size, fullWidth, hasIcon }) => css`
     color: ${theme.colors.white};
     border: none;
     border-radius: ${theme.border.radius};
+    cursor: pointer;
 
     padding: ${theme.spacings.xxsmall};
 
     background: linear-gradient(180deg, #ff5f5f 0%, #f062c0 50%);
 
     ${!!size && WrapperModifiers[size](theme)};
+    ${!!fullWidth && WrapperModifiers.fullWidth()};
+    ${!!hasIcon && WrapperModifiers.withIcon(theme)};
   `}
 `
