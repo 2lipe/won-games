@@ -12,6 +12,11 @@ export default {
     buttonLabel: 'Buy now',
     buttonLink: '/games/defy-death'
   },
+  argTypes: {
+    ribbon: {
+      type: 'string'
+    }
+  },
   parameters: {
     layout: 'fullscreen'
   }
