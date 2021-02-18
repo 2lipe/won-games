@@ -6,7 +6,7 @@ export default {
   title: 'Banner',
   component: Banner,
   args: {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
+    img: '/img/crashlands-img.jpg',
     title: 'Defy death',
     subtitle: '<p>Play the new <strong>CrashLands</strong> season</p>',
     buttonLabel: 'Buy now',

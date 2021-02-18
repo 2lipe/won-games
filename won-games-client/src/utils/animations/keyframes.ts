@@ -11,3 +11,14 @@ export const hoverAnimation = keyframes`
     left: 0;
   }
 `
+
+export const placeholderShimmer = keyframes`
+  0% {
+    background-position: -40rem 0;
+  }
+
+  100% {
+    background-position: 40rem 0;
+
+  }
+`
