@@ -22,13 +22,13 @@ const items = [
 ]
 
 describe('<BannerSlider />', () => {
-  it('should render vertical Slider', () => {
+  it('should be render vertical Slider', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />)
 
     expect(container.querySelector('.slick-vertical')).toBeInTheDocument()
   })
 
-  it('should render with 1 active item in Slider', () => {
+  it('should be render with 1 active item in Slider', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />)
 
     expect(container.querySelectorAll('.slick-slide')).toHaveLength(2)
@@ -41,5 +41,11 @@ describe('<BannerSlider />', () => {
     expect(
       screen.getByRole('heading', { name: /Defy death 2/i, hidden: true })
     ).toBeInTheDocument()
+  })
+
+  it('should be render with dots', () => {
+    const { container } = renderWithTheme(<BannerSlider items={items} />)
+
+    expect(container.querySelector('.slick-dots')).toBeInTheDocument()
   })
 })
