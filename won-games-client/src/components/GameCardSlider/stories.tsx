@@ -1,57 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 import { GameCardSlider, GameCardSliderProps } from '.'
 
-const items = [
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  },
-  {
-    title: 'Population Zero',
-    developer: 'Rockstar Games',
-    img: '/img/population-zero-img.jpg',
-    price: 'R$ 235,00',
-    promotionalPrice: 'R$ 200,00'
-  }
-]
+import items from './mock'
 
 export default {
   title: 'GameCardSlider',
