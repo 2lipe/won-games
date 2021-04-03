@@ -14,6 +14,7 @@ type ButtonTypes =
 export type ButtonProps = {
   size?: 'small' | 'medium' | 'large'
   fullWidth?: boolean
+  minimal?: boolean
   icon?: ReactNode
   as?: ElementType
 } & ButtonTypes
@@ -23,6 +24,7 @@ export const Button = ({
   icon,
   size = 'medium',
   fullWidth = false,
+  minimal = false,
   onClick,
   ...rest
 }: ButtonProps) => (
@@ -31,6 +33,7 @@ export const Button = ({
     fullWidth={fullWidth}
     hasIcon={!!icon}
     onClick={onClick}
+    minimal={minimal}
     {...rest}
   >
     {!!icon && icon}
