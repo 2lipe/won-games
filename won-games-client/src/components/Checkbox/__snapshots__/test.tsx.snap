@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Ribbon /> should render the heading 1`] = `
+exports[`<Checkbox /> should render the heading 1`] = `
 <main
   class=""
 >
   <h1>
-    Ribbon
+    Checkbox
   </h1>
 </main>
 `;
