@@ -1,9 +1,25 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { TextField } from '.'
+import { TextField, TextFieldProps } from '.'
+import { Email } from '@styled-icons/material-outlined'
 
 export default {
   title: 'TextField',
-  component: TextField
+  component: TextField,
+  args: {
+    label: 'E-mail',
+    labelFor: 'Email',
+    id: 'email',
+    initialValue: '',
+    placeholder: 'johny.cage@mail.com',
+    icon: <Email />
+  },
+  argTypes: {
+    onInput: { action: 'changed' }
+  }
 } as Meta
 
-export const Default: Story = () => <TextField />
+export const Default: Story<TextFieldProps> = (args) => (
+  <div style={{ maxWidth: 300, padding: 15 }}>
+    <TextField {...args} />
+  </div>
+)
