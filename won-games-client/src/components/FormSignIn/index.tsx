@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
-
 import { Email, Lock } from '@styled-icons/material-outlined'
-import { Button } from 'components/Button'
 
+import { Button } from 'components/Button'
 import { TextField } from 'components/TextField'
+import { FormWrapper, FormLink } from 'components/Form'
 
 import * as S from './styles'
 
 export const FormSignIn = () => (
-  <S.Wrapper>
+  <FormWrapper>
     <form>
       <TextField
         name="email"
@@ -31,14 +31,14 @@ export const FormSignIn = () => (
         Sign in now
       </Button>
 
-      <S.SignUpLink>
+      <FormLink>
         <p>
           Don't have an account?{' '}
           <Link href="/sign-up">
             <a>Sign Up</a>
           </Link>
         </p>
-      </S.SignUpLink>
+      </FormLink>
     </form>
-  </S.Wrapper>
+  </FormWrapper>
 )
