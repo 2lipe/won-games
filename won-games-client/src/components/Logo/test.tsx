@@ -49,4 +49,10 @@ describe('<Logo />', () => {
       }
     )
   })
+
+  it('should be render the logo with id passed', () => {
+    const { container } = renderWithTheme(<Logo id="logoId" />)
+
+    expect(container.querySelector('#paint_linear_logoId')).toBeInTheDocument()
+  })
 })
