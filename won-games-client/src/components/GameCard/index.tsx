@@ -5,7 +5,7 @@ import {
   AddShoppingCart
 } from '@styled-icons/material-outlined'
 
-import { Button } from 'components/Button'
+import Button from 'components/Button'
 import { Ribbon, RibbonColors, RibbonSizes } from 'components/Ribbon'
 
 import * as S from './styles'

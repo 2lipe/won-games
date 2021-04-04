@@ -3,7 +3,7 @@ import { darken } from 'polished'
 
 import { ButtonProps } from '.'
 
-type WrapperProps = {
+export type WrapperProps = {
   hasIcon: boolean
 } & Omit<ButtonProps, 'children'>
 
