@@ -14,7 +14,8 @@ export default {
     icon: <Email />
   },
   argTypes: {
-    onInput: { action: 'changed' }
+    onInput: { action: 'changed' },
+    icon: { type: '' }
   }
 } as Meta
 
