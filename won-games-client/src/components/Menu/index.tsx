@@ -77,11 +77,15 @@ export const Menu = ({ username }: MenuProps) => {
 
         {userIsNotLoggedIn && (
           <S.RegisterBox>
-            <Button size="large">Log in now</Button>
+            <Link href="/sign-in" passHref>
+              <Button size="large" as="a">
+                Sign in
+              </Button>
+            </Link>
             <span>or</span>
-            <S.CreateAccount href="#" title="Sign up">
-              Sign Up
-            </S.CreateAccount>
+            <Link href="/sign-up" passHref>
+              <S.CreateAccount title="Sign up">Sign Up</S.CreateAccount>
+            </Link>
           </S.RegisterBox>
         )}
       </S.MenuFull>
