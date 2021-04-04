@@ -1,5 +1,4 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from 'styled-media-query'
 
 import { HeadingProps, LineColors } from '.'
 
@@ -14,6 +13,10 @@ const WrapperModifiers = {
 
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xxlarge};
+  `,
+
+  huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.huge};
   `,
 
   lineLeft: (theme: DefaultTheme, lineColor: LineColors) => css`
